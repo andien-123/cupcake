@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Cupcake</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fbd9e5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .product-info {
+            margin-top: 20px;
+        }
+
+        .category {
+            font-weight: bold;
+            color: #c43670;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .product-name {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .price {
+            background: #c43670;
+            color: white;
+            padding: 6px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .order-form {
+            margin-top: 20px;
+        }
+
+        .order-form label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .order-form input {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid #c43670;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 300px;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-buy {
+            background: #c43670;
+            color: white;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="Asset/Kinder bueno cupcakes.jpeg" alt="Cupcake Kinder Bueno" class="product-image">
+    <div class="product-info">
+        <h2 class="category">TOPPING</h2>
+        <h1 class="product-name">Kinder Bueno</h1>
+        <p class="price">Rp. 20.000,-</p>
+        <p class="description">
+            Cupcake coklat dengan topping krim lembut, dibuat dari bahan berkualitas tinggi.
+            Manis, lembut, dan cocok untuk semua acara spesial!
+        </p>
+
+        <!-- Form Pemesanan -->
+        <form action="process_order.php" method="POST" class="order-form">
+            <label for="customer">Nama Pelanggan:</label>
+            <input type="text" id="customer" name="customer" required>
+        
+            <label for="quantity">Jumlah:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+        
+            <button type="submit" class="btn btn-buy">Pesan Sekarang</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
